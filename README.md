@@ -1,1 +1,0 @@
-# Riccardo De Benedictis
