@@ -1,3 +1,4 @@
 name: Riccardo De Benedictis
 markdown: kramdown
 permalink: pretty
+theme: jekyll-theme-cayman
