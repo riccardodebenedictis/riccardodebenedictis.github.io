@@ -2,6 +2,7 @@
 layout: default
 title: Research
 ---
+
 My research topics cover everything that has to do with automated reasoning, including its connections with theoretical computer science and philosophy. In particular, it is possible to identify three forms of logical reasoning, typically known as *deduction*, *abduction* and *induction*, which, together, allow to achieve interesting behaviours.
 
 To better understand my research it is necessary to first introduce some basic concepts. The above forms of logical reasoning, in particular, rely on a set of *rules*, each consisting of a premise, a material condition and a conclusion, which represent the *knowledge* the system has about how the world works. Such rules constitutes what, in knowledge representation, is typically referred to as *TBox*. In order to represent the world and, therefore, allow a machine to think about it, furthermore, in addition to the rules there is the need of a set of *assertions* which, depending on the reasoning needs, can be translated into *facts* and *goals*. Such assertions constitutes what, in knowledge representation, is typically referred to as *ABox*.
@@ -11,7 +12,7 @@ To better understand my research it is necessary to first introduce some basic c
 Deductive reasoning determines whether the truth of a conclusion can be determined based solely on the truth of the premises.
 Given a set of facts, in particular, deductive reasoning tries to apply the rules, from premises to conclusions, to *deduce* new information.
 
-A typical example of deductive reasoning is the one adopted in the most classic of Aristotelian syllogisms. The rule, in this case, expresses the concept that all "men are mortal". From a formal point of view, we can express this rule as $\forall x . man \left( x \right) \Rightarrow mortal \left( x \right)$. By being aware that Socrates is a man, we can add the $man \left( Socrates \right)$ fact to the knowledge base. Through deductive reasoning, at this point, a reasoning engine could *deduce* the $mortal \left( Socrates \right)$ fact, which indicates that Socrates is mortal. Note that the newly inferred fact is, in turn, a fact and, therefore, could trigger further deductive reasoning.
+A typical example of deductive reasoning is the one adopted in the most classic of Aristotelian syllogisms. The rule, in this case, expresses the concept that "all men are mortal". From a formal point of view, we can express this rule as $\forall x . man \left( x \right) \Rightarrow mortal \left( x \right)$. By being aware that Socrates is a man, we can add the $man \left( Socrates \right)$ fact to the knowledge base. Through deductive reasoning, at this point, a reasoning engine could *deduce* the $mortal \left( Socrates \right)$ fact, which indicates that Socrates is mortal. Note that the newly inferred fact is, in turn, a fact and, therefore, could trigger further deductive reasoning.
 
 The sequential application of deductive reasoning is typically referred to as *forward chaining*, and is adopted in numerous software architectures such as *knowledge based systems*, *rule based systems*, *expert systems*, *production systems*, etc.
 The technical challenges, in this form of reasoning, are linked to:
