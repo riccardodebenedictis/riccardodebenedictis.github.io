@@ -58,4 +58,4 @@ It is worth noting that, through the application of the $\pi\left(s\right)$ poli
 
 ## References
 
-[<a name="r1"></a>1] De Benedictis, Riccardo, and Cesta, Amedeo. "Lifted Heuristics for Timeline-based Planning." ECAI 2020. IOS Press, 2020. 2330-2337 ([pdf](https://ebooks.iospress.nl/volumearticle/55157)).
+[<a name="r1"></a>1] De Benedictis, R. & Cesta, A. (2020). *Lifted Heuristics for Timeline-based Planning*. ECAI 2020. IOS Press. 2330-2337 ([pdf](https://ebooks.iospress.nl/volumearticle/55157)).
