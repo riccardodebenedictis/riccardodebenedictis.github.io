@@ -2,7 +2,7 @@
 layout: default
 title: Home
 ---
-<img style="float: left; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); padding: 10px;" src="figures/face.png">
+<img style="float: left; box-shadow: box-shadow: 5px 5px 10px 0px #000000; padding: 10px;" src="figures/face.png">
 
 Hi all! I am **{{site.name}}**. I have a M.Sc. in Computer Engineering since 2010 from University of Rome 'La Sapienza' and a Ph.D. in Computing, Electronics and Mathematics since 2019 from University of Plymouth.
 
