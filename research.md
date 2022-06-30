@@ -1,3 +1,7 @@
+---
+layout: default
+title: Research
+---
 My research topics cover everything that has to do with automated reasoning, including its connections with theoretical computer science and philosophy. In particular, it is possible to identify three forms of logical reasoning, typically known as *deduction*, *abduction* and *induction*, which, together, allow to achieve interesting behaviours.
 
 To better understand my research it is necessary to first introduce some basic concepts. The above forms of logical reasoning, in particular, rely on a set of *rules*, each consisting of a premise, a material condition and a conclusion, which represent the *knowledge* the system has about how the world works. Such rules constitutes what, in knowledge representation, is typically referred to as *TBox*. In order to represent the world and, therefore, allow a machine to think about it, furthermore, in addition to the rules there is the need of a set of *assertions* which, depending on the reasoning needs, can be translated into *facts* and *goals*. Such assertions constitutes what, in knowledge representation, is typically referred to as *ABox*.
@@ -11,7 +15,7 @@ A typical example of deductive reasoning is the one adopted in the most classic 
 
 The sequential application of deductive reasoning is typically referred to as *forward chaining*, and is adopted in numerous software architectures such as *knowledge based systems*, *rule based systems*, *expert systems*, *production systems*, etc.
 The technical challenges, in this form of reasoning, are linked to:
- - *Match*: the verification of the premises of the rules (verifying all the rules, as the number of rules increases, it soon becomes inefficient, for this reason algorithms such as the RETE algorithm are adopted).
+ - *Match*: the verification of the premises of the rules. As the number of rules increases, indeed, verifying *all* the rules at each update quickly becomes inefficient. For this reason algorithms such as the [RETE](https://en.wikipedia.org/wiki/Rete_algorithm) algorithm are adopted.
  - *Conflict-Resolution*: In the event that the premises of several rules are verified at the same time, it is necessary to establish which rule to apply and, consequently, which facts to deduce. Typically, the approach is taken of choosing the rule whose verified premise is considered the most constrained.
  - *Rule definition*: As the complexity of the modeled system increases, the definition of rules becomes a pain. In fact, the need for two professional figures soon emerges: the *domain expert*, who knows how the system to be modeled works in the real world, and the *knowledge engineer*, who knows how the inference engine works.
  
@@ -28,6 +32,10 @@ As in the deductive case, the abduction can be iterated, making the inferred ass
 ### Inductive reasoning
 
 Inductive reasoning attempts to generate, e.g., from a set of examples, the rules which allow the previous forms of reasoning. After numerous examples are taken to be a conclusion that follows from a precondition, a rule is hypothesized.
+
+### Putting things together
+
+Each of the foregoing forms of reasoning has its strengths and weaknesses, both technical and intrinsic. A theme that I have always considered interesting concerns the development of architectures capable of orchestrating these different forms of reasoning, so as to exploit their strengths in a homogeneous way.
 
 ## References
 [<a name="r1"></a>1] De Benedictis, Riccardo, and Cesta, Amedeo. "Lifted Heuristics for Timeline-based Planning." ECAI 2020. IOS Press, 2020. 2330-2337 ([pdf](https://ebooks.iospress.nl/volumearticle/55157)).
