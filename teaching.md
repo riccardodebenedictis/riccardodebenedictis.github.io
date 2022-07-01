@@ -1,6 +1,6 @@
 ---
 layout: default
-title: TEL and Cultural Heritage
+title: Technology Enhanced Learning and Cultural Heritage
 ---
 
 Technology Enhanced Learning (TEL) is a set of training methodologies, based on particular digital technologies, which emphasize the interactivity of the learning process. I have initially approached the TEL theme within the [PANDORA](https://www.istc.cnr.it/it/project/pandora-advanced-training-environment-crisis-scenarios-0) project, whose goal was to apply state-of-the-art ICT technologies to build a learning environment for strategic crisis managers. An original use of the timeline-based planning, specifically, was used to diversify crisis scenarios by creating alternative training paths and to model trainees behavioral patterns for personalized training \[[5](#r5)\]. More recently, the theme has been taken up again within the [Città Educante](http://www.cittaeducante.it) project, aiming at proposing new educational approaches, enriching and innovating methods and tools, overcoming classical systems and the traditional role of educators. Within this project, in particular, [ExPLoRAA](https://github.com/pstlab/ExPLoRAA) (ExPeriential LeaRning for Active Aging) was initially developed \[[4](#r4)\]. Starting from a static representation containing an high-level lesson track, initially stored in the database, a lesson is planned and dynamically adapted and personalized for the involved users.

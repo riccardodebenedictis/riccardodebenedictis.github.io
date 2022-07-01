@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Research
+title: Basic Research
 ---
 
 My research topics cover everything that has to do with automated reasoning, including its connections with theoretical computer science and philosophy. In particular, it is possible to identify three forms of logical reasoning, typically known as *deduction*, *abduction* and *induction*, which, together, allow to achieve interesting behaviours.
