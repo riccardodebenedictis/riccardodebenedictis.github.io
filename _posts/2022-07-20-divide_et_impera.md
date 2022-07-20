@@ -7,7 +7,7 @@ The old Latin phrase of [Divide et Impera](https://en.wikipedia.org/wiki/Divide_
 
 The current component organization of *oRatio*, in particular, is schematized in the following figure. As you can see, the components are varied and, more importantly, many of them can be used for different purposes. It is therefore inconvenient for users to have to download them all in order to use only a few of them.
 
-<img style="display: block; margin-left: auto; margin-right: auto; width: 50%; padding: 10px;" src="../figures/oRatioComponents.png">
+<img style="display: block; margin-left: auto; margin-right: auto; width: 50%; padding: 10px;" src="{{site.url}}/figures/oRatioComponents.png">
 
 What would happen if you wanted to use the SMT constraint network to solve a different type of problem from those that *oRatio* is able to solve? What if we wanted to create a new solver capable of solving the same kind of problems without making use of the SMT technology? For these, and for other reasons, assigning each component its own repository would ensure greater agility in implementation. Let's see in a little more detail what services the different components provide.
 
