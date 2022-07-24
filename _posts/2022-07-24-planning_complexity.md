@@ -47,13 +47,13 @@ In a scenario like this, Sussman's anomaly is represented by the gate that force
 
 If we are particularly lucky, the mountain could have a shape like the one depicted in the following picture. Although with a profile that is not perfectly regular like the one in the figure, the mountain could still have a path similar to that of a [convex](https://en.wikipedia.org/wiki/Convex_function) function.
 
-<img style="display: block; margin-left: auto; margin-right: auto; width: 50%; padding: 10px;" src="{{site.url}}/figures/2022-07-24-planning_complexity/2022-07-24-planning_complexity/convex.png">
+<img style="display: block; margin-left: auto; margin-right: auto; width: 50%; padding: 10px;" src="{{site.url}}/figures/2022-07-24-planning_complexity/convex.png">
 
 In this case, of course, wherever we were, we would have to do nothing but go down! It is difficult to demonstrate intelligent behavior in these cases, as even a fairly round stone would be able to return home. It should only roll, taking advantage of gravity, while letting itself be guided by the slope of the mountain.
 
 The situation would become risky, although more interesting, if we were on a mountain with a profile similar to that of the following figure. This shape is typically called the [Ackley function](https://en.wikipedia.org/wiki/Ackley_function) and is often used to test the capabilities of the optimization algorithms.
 
-<img style="display: block; margin-left: auto; margin-right: auto; width: 50%; padding: 10px;" src="{{site.url}}/figures/2022-07-24-planning_complexity/2022-07-24-planning_complexity/ackley.png">
+<img style="display: block; margin-left: auto; margin-right: auto; width: 50%; padding: 10px;" src="{{site.url}}/figures/2022-07-24-planning_complexity/ackley.png">
 
 In this case, in particular, we wouldn't know where to go! We could not superficially exploit the information coming from the slope of the mountain because, almost certainly, we would end up in a local minimum. Any attempt to reach our vehicle, moreover, would almost certainly require the need to take some steps uphill, forcing us to *move away* from the lowest point to, hopefully, *getting closer* to it, later, and, eventually, finally reach the destination.
 
