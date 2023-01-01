@@ -11,7 +11,10 @@ In their masterpiece, Ghallab et al. define planning as "the *reasoning* side of
 
 In this post, we will focus on the *execution* side of planning, and we will see how the [architecture](/research/#putting-things-together) used to integrate [deductive](/research/#deductive-reasoning) and [abductive](/research/#abductive-reasoning) forms of reasoning can be used, in automated planning, to integrate the above mentioned reasoning and reaction. We are talking, once again, about the following architecture, this time focusing on the $a_d$ actions, towards the deliberative tier, responsible, for example, for the creation and for the adaptation of the generated plans, and on the $s_d$ state, towards the reactive tier, responsible, for example, for the execution of the generated plans.
 
-<img style="display: block; margin-left: auto; margin-right: auto; width: 50%; padding: 10px;" src="{{site.url}}/figures/architecture.png">
+<figure class="figure">
+  <img src="{{site.url}}/figures/architecture.png" class="figure-img img-fluid rounded" alt="...">
+  <figcaption class="figure-caption">Things neve go as expected.</figcaption>
+</figure>
 
 It is my opinion, in fact, that any planner and executor who can claim to be such, beyond the syntax, should provide functionalities similar to the $a_d$ actions and to the $s_d$ state. In the following section, we will enumerate these functionalities.
 
