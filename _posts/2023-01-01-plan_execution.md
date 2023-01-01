@@ -3,7 +3,7 @@ layout: post
 title: Plans are made to be executed!
 ---
 
-In the first post of the new year, I wanted to discuss some aspects of **plan execution** that, in my opinion, are too often overlooked by the planning community. In particular, I would like to focus on the execution of plans, and on the need to make plans adaptable and executable. Instead of focusing on the technical details, I would like to discuss some features that any planner, in my opinion, should possess in order to effectively interface with the real world.
+In the first post of the new year, I would like to discuss some aspects of **plan execution** that, in my opinion, are too often overlooked by the planning community. In particular, I would like to focus on the execution of plans, and on the need to make plans adaptable and executable. Instead of focusing on the technical details, I would like to discuss some features that any planner, in my opinion, should possess in order to effectively interface with the real world.
 
 <img style="display: block; margin-left: auto; margin-right: auto; width: 50%; padding: 10px;" src="../figures/2023-01-01-plan_execution/crane_failure.jpg">
 
