@@ -3,7 +3,7 @@ layout: default
 title: Riccardo De Benedictis
 ---
 
-<img style="float: left; border: 1px solid; box-shadow: 5px 10px 8px #888888; margin: 25px;" src="{{site.url}}/figures/face.png">
+<img class="img-thumbnail" src="{{site.url}}/figures/face.png">
 
 Hi all! I am **{{site.name}}**. I have a M.Sc. in Computer Engineering since 2010 from University of Rome 'La Sapienza' and a Ph.D. in Computing, Electronics and Mathematics since 2019 from University of Plymouth.
 
