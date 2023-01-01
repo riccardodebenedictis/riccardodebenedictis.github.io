@@ -9,25 +9,40 @@ In 1973, in his PhD thesis, Gerald Jay Sussman shows some problems of the planne
 
 In order to describe these issues, suppose we are in a [blocks world](https://en.wikipedia.org/wiki/Blocks_world), a world, typically used in automated planning, in which there are some blocks on a table and the goal is to build one or more vertical stacks of blocks. Possible world states can be described by a set of literals considered true in a particular state, assuming, in a typical [closed-world assumption](https://en.wikipedia.org/wiki/Closed-world_assumption), that literals not explicitly declared as true are false. The initial state, in particular, graphically shown in the following image, could be described by means of the $OnTable\left(A\right)$, the $OnTable\left(B\right)$ and the $On\left(A, C\right)$ literals.
 
-<img style="display: block; margin-left: auto; margin-right: auto; width: 50%; padding: 10px;" src="{{site.url}}/figures/2022-07-24-planning_complexity/sa01.png">
+<figure class="figure" class="text-center">
+  <img src="{{site.url}}/figures/2022-07-24-planning_complexity/sa01.png" class="figure-img img-fluid rounded" alt="...">
+  <figcaption class="figure-caption">A possible initial state of a blocks world problem instance.</figcaption>
+</figure>
 
 The agent can take the blocks, move them on the table or stack them on other blocks. The assumption, however, is that blocks have weight and, therefore, you can only take blocks that have no other blocks above them. Suppose now we want to generate a sequence of actions (i.e., a plan) whose execution would achieve the objective, graphically shown in the following image, described by the $On\left(C, B\right)$ and the $On\left(B, A\right)$ literals.
 
-<img style="display: block; margin-left: auto; margin-right: auto; width: 50%; padding: 10px;" src="{{site.url}}/figures/2022-07-24-planning_complexity/sa05.png">
+<figure class="figure" class="text-center">
+  <img src="{{site.url}}/figures/2022-07-24-planning_complexity/sa05.png" class="figure-img img-fluid rounded" alt="...">
+  <figcaption class="figure-caption">The desired state of the previous blocks world problem instance.</figcaption>
+</figure>
 
 The agent may think of achieving the two goals independently, achieving, initially, the first goal and, then, the other. Suppose, for example, that the $On\left(C, B\right)$ goal is chosen as first. To this end, the agent takes $B$ block, initially on the table, and stacks it on block $C$, easily achieving, as graphically shown in the following image, the $On\left(C, B\right)$ goal.
 
-<img style="display: block; margin-left: auto; margin-right: auto; width: 50%; padding: 10px;" src="{{site.url}}/figures/2022-07-24-planning_complexity/sa02.png">
+<figure class="figure" class="text-center">
+  <img src="{{site.url}}/figures/2022-07-24-planning_complexity/sa02.png" class="figure-img img-fluid rounded" alt="...">
+  <figcaption class="figure-caption">Block $A$ cannot be moved, making the $On\left(B, A\right)$ goal unachievable.</figcaption>
+</figure>
 
 Once block $B$ is stacked on top of block $C$, however, block $A$ gets stuck under the weight of blocks $B$ and $C$. Not being able to move block $A$, clearly, the $On\left(B, A\right)$ goal remains unachievable.
 
 A similar problem could have occurred even if, instead of the $On\left(C, B\right)$ goal, the $On\left(B, A\right)$ goal would have been chosen as first. Block $C$, in particular, could be picked up and moved on the table.
 
-<img style="display: block; margin-left: auto; margin-right: auto; width: 50%; padding: 10px;" src="{{site.url}}/figures/2022-07-24-planning_complexity/sa03.png">
+<figure class="figure" class="text-center">
+  <img src="{{site.url}}/figures/2022-07-24-planning_complexity/sa03.png" class="figure-img img-fluid rounded" alt="...">
+  <figcaption class="figure-caption">Block $C$ is moved on the table.</figcaption>
+</figure>
 
 Block $A$ could then be picked up and stacked on block $B$.
 
-<img style="display: block; margin-left: auto; margin-right: auto; width: 50%; padding: 10px;" src="{{site.url}}/figures/2022-07-24-planning_complexity/sa04.png">
+<figure class="figure" class="text-center">
+  <img src="{{site.url}}/figures/2022-07-24-planning_complexity/sa04.png" class="figure-img img-fluid rounded" alt="...">
+  <figcaption class="figure-caption">Block $B$ cannot be moved, making the $On\left(C, B\right)$ goal unachievable.</figcaption>
+</figure>
 
 In this case block $B$ gets stuck under the weight of block $A$, making the $On\left(C, B\right)$ goal remains unachievable.
 
@@ -39,7 +54,10 @@ The Sussman anomaly, to date, is handled by any modern planner. It remains, none
 
 Imagine, for example, the following sadistic situation. There is a dog and, beyond a gate, a nice succulent bone.
 
-<img style="display: block; margin-left: auto; margin-right: auto; width: 50%; padding: 10px;" src="{{site.url}}/figures/2022-07-24-planning_complexity/dog.png">
+<figure class="figure" class="text-center">
+  <img src="{{site.url}}/figures/2022-07-24-planning_complexity/dog.png" class="figure-img img-fluid rounded" alt="...">
+  <figcaption class="figure-caption">A gate separates a dog from a succulent bone.</figcaption>
+</figure>
 
 The gate is, on one side, far from the bone, open. In order to reach the bone, hence, the dog should first *move away* from the bone and, once through the gate, *get closer* and easily reach the tasty booty. However, the dog sees the bone through the gate and smells it. The closer it gets to the bone, the more difficult it will be to move away from it. Whenever the poor dog moves away from the bone to look for an alternative to reach the meal it will see the bone go away, the bone's smell will be fading and, therefore, the dog will end up believing that it is moving in the wrong direction, getting back "closer" to the bone.
 
@@ -47,13 +65,19 @@ In a scenario like this, Sussman's anomaly is represented by the gate that force
 
 If we are particularly lucky, the mountain could have a shape like the one depicted in the following picture. Although with a profile that is not perfectly regular like the one in the figure, the mountain could still have a path similar to that of a [convex](https://en.wikipedia.org/wiki/Convex_function) function.
 
-<img style="display: block; margin-left: auto; margin-right: auto; width: 50%; padding: 10px;" src="{{site.url}}/figures/2022-07-24-planning_complexity/convex.png">
+<figure class="figure" class="text-center">
+  <img src="{{site.url}}/figures/2022-07-24-planning_complexity/convex.png" class="figure-img img-fluid rounded" alt="...">
+  <figcaption class="figure-caption">A convex function.</figcaption>
+</figure>
 
 In this case, of course, wherever we were, we would have to do nothing but go down! It is difficult to demonstrate intelligent behavior in these cases, as even a fairly round stone would be able to return home. It should only roll, taking advantage of gravity, while letting itself be guided by the slope of the mountain.
 
 The situation would become risky, although more interesting, if we were on a mountain with a profile similar to that of the following figure. This shape is typically called the [Ackley function](https://en.wikipedia.org/wiki/Ackley_function) and is often used to test the capabilities of the optimization algorithms.
 
-<img style="display: block; margin-left: auto; margin-right: auto; width: 50%; padding: 10px;" src="{{site.url}}/figures/2022-07-24-planning_complexity/ackley.png">
+<figure class="figure" class="text-center">
+  <img src="{{site.url}}/figures/2022-07-24-planning_complexity/ackley.png" class="figure-img img-fluid rounded" alt="...">
+  <figcaption class="figure-caption">The Ackley function.</figcaption>
+</figure>
 
 In this case, in particular, we wouldn't know where to go! We could not superficially exploit the information coming from the slope of the mountain because, almost certainly, we would end up in a local minimum. Any attempt to reach our vehicle, moreover, would almost certainly require the need to take some steps uphill, forcing us to *move away* from the lowest point to, hopefully, *getting closer* to it, later, and, eventually, finally reach the destination.
 

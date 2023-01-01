@@ -38,7 +38,10 @@ Inductive reasoning attempts to generate, e.g., from a set of examples, the rule
 
 Each of the foregoing forms of reasoning has its strengths and weaknesses, both technical and intrinsic. A theme that I have always considered interesting concerns the development of architectures capable of orchestrating these different forms of reasoning, so as to exploit their strengths in a homogeneous way. An architecture that is proving to be quite flexible is shown in the following figure.
 
-<img style="display: block; margin-left: auto; margin-right: auto; width: 50%; padding: 10px;" src="{{site.url}}/figures/architecture.png">
+<figure class="figure" class="text-center">
+  <img src="{{site.url}}/figures/architecture.png" class="figure-img img-fluid rounded" alt="...">
+  <figcaption class="figure-caption">A three-tier architecture for integrating deductive and abductive reasoning.</figcaption>
+</figure>
 
 This architecture is inspired by the classic [three-tier architectures](https://en.wikipedia.org/wiki/Three-layer_architecture) typically used in robotics. Thanks to its flexibility, however, it allows to solve real problems and, at the same time, to respond to some research needs. Specifically, the architecture consists of a *deliberative* tier responsible, through [abductive reasoning](#abductive-reasoning), for the generation, the execution and the dynamic adaptation of the plans; a *sequencing* tier which, through the application of a policy, performing [deductive reasoning](#deductive-reasoning), executes a sequence of actions according to the current state of the system; and a *sensing* and a *controlling* tier, which respectively interprets data produced by sensors and translates the sequencer's actions into lower level commands for the actuators.
 
