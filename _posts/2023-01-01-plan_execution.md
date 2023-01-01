@@ -21,19 +21,19 @@ The first steps towards the execution of a plan is to make it adaptable. In part
 
 In other words, to realize these adaptation features, we need to implement the following primitives:
 
- - **delay(task_id id, time_interval d = 1)**: the execution of a task is delayed, because it is not ready to start;
- - **extend(task_id id, time_interval d = 1)**: the duration of a task is extended, because it is not ready to end;
- - **add(requirement req)**: a new requirement is added to the plan, because it is required by the reactive module;
- - **fail(set&lt;task_id&gt; tasks)**: the execution of a set of tasks has failed, because their constraints cannot be satisfied, or because unforeseen events in the real world have caused its failure.
+ - **`delay(task_id id, time_interval d = 1)`**: the execution of a task is delayed, because it is not ready to start;
+ - **`extend(task_id id, time_interval d = 1)`**: the duration of a task is extended, because it is not ready to end;
+ - **`add(requirement req)`**: a new requirement is added to the plan, because it is required by the reactive module;
+ - **`fail(set&lt;task_id&gt; tasks)`**: the execution of a set of tasks has failed, because their constraints cannot be satisfied, or because unforeseen events in the real world have caused its failure.
 
 The $s_d$ state towards the reactive tier, on the contrary, is more directly related to the execution of plans. The information coming from the deliberative tier, in particular, represent signals for the start and the termination of the planned tasks. Before running (or finishing) a planned task, however, you should check that you can run (or finish) the task considering the current state of the world. We would like to avoid, for example, having a social robot initiate a scheduled interaction task with a person who is not at home. In case it is not possible to start (terminate) a scheduled task, depending on the flexibility of the plan, we might want to try to delay it, before declaring it failed.
 
 The primitives to implement, in this case, are:
 
- - **can_start(task_id id)**: check if it is possible to start the execution of a task, providing the possibility to invoke the **delay** primitive in case it is not possible;
- - **start(task_id id)**: the execution of a task is started, because it is ready to start;
- - **can_end(task_id id)**: check if it is possible to terminate the execution of a task, providing the possibility to invoke the **extend** primitive in case it is not possible;
- - **end(task_id id)**: the execution of a task is terminated, because it is ready to end.
+ - **`can_start(task_id id)`**: check if it is possible to start the execution of a task, providing the possibility to invoke the **`delay`** primitive in case it is not possible;
+ - **`start(task_id id)`**: the execution of a task is started, because it is ready to start;
+ - **`can_end(task_id id)`**: check if it is possible to terminate the execution of a task, providing the possibility to invoke the **`extend`** primitive in case it is not possible;
+ - **`end(task_id id)`**: the execution of a task is terminated, because it is ready to end.
 
 Given the possibility, through the previous adaptation features, of generating a new plan from scratch, or to replace the current plan with another one, more in line with the dynamic evolution of reality, the [complexity](./2022/07/24/planning_complexity) of these adaptations reaches that of solving a planning problem from scratch. It is nonetheless possible to adopt strategies that are more efficient than the worst case, making the adaptations quite efficient. Such efficiency is particularly useful in interactive contexts such as those to which [social robots](https://en.wikipedia.org/wiki/Social_robot) are typically exposed. In these cases, in particular, the reactive response of a system becomes essential to make the interaction more engaging.
 
