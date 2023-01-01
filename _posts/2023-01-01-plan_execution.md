@@ -7,7 +7,7 @@ In the first post of the new year, I would like to discuss some aspects of **pla
 
 <figure class="figure" class="text-center">
   <img src="{{site.url}}/figures/2023-01-01-plan_execution/crane_failure.jpg" class="figure-img img-fluid rounded" alt="...">
-  <figcaption class="figure-caption">Things never go as expected.</figcaption>
+  <figcaption class="figure-caption">No matter how good you are at planning, things never go as expected.</figcaption>
 </figure>
 
 In their masterpiece, Ghallab et al. define planning as "the *reasoning* side of acting" \[[1](#r1)\]. Planning, in particular, represents an abstract, explicit deliberation process that chooses and organizes actions by anticipating their expected outcomes. Although [automated planning](https://en.wikipedia.org/wiki/Automated_planning_and_scheduling) constitutes a rich technical field, however, most of the literature on domain-independent planning is biased towards that "reasoning" side. Whether due to a partial knowledge of the world, or to the impossibility of predicting the actions of other agents that autonomously act in the same environment, a large part of any agent's behavior can be traced back to its ability to *react* to dynamic changes occurring, or predicted, in the world.
